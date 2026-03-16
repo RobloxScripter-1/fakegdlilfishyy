@@ -1,4 +1,6 @@
-import { useEffect, useRef, useClient, useCallback } from "react";
+"use client";
+
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const LEVEL_LENGTH = 9000;
 const GROUND_Y = 330;
