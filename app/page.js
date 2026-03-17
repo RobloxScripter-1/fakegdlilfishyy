@@ -210,8 +210,10 @@ export default function GDGame() {
 
       const pct = Math.min(100, Math.floor((p.x / LEVEL_LENGTH) * 100));
       if (pct > bestRef.current) bestRef.current = pct;
-      setUi(u => pct !== u.pct ? { ...u, pct, best: bestRef.current } : u);
-    }
+      frame++;
+if (frame % 6 === 0) {
+  setUi(u => pct !== u.pct ? { ...u, pct, best: bestRef.current } : u);
+}
 
     function draw() {
       const camX = camXRef.current;
@@ -353,7 +355,7 @@ export default function GDGame() {
       draw();
       rafRef.current = requestAnimationFrame(loop);
     }
-    let frame = 58;
+    let frame = 0;
 playerRef.current = initPlayer();
 rafRef.current = requestAnimationFrame(loop);
     playerRef.current = initPlayer();
