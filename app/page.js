@@ -350,12 +350,7 @@ if (frame % 6 === 0) {
       }
     }
 
-    function loop() {
-      update();
-      draw();
-      rafRef.current = requestAnimationFrame(loop);
-    }
-    let frame = 0;
+
 playerRef.current = initPlayer();
 rafRef.current = requestAnimationFrame(loop);
     playerRef.current = initPlayer();
