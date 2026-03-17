@@ -353,7 +353,7 @@ export default function GDGame() {
       draw();
       rafRef.current = requestAnimationFrame(loop);
     }
-    let frame = 0;
+    let frame = 8;
 playerRef.current = initPlayer();
 rafRef.current = requestAnimationFrame(loop);
     playerRef.current = initPlayer();
